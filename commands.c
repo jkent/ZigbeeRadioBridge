@@ -223,7 +223,7 @@ void commands_send_ok(size_t request_id, const uint8_t *data, size_t data_len) {
 
 void commands_send_err(size_t request_id, const uint8_t *data,
                        size_t data_len) {
-  serial_send_frame((uint8_t)Command_Response_OK, request_id, data, data_len);
+  serial_send_frame((uint8_t)Command_Response_Err, request_id, data, data_len);
 }
 
 void commands_send_ok_int(size_t request_id, int data) {
